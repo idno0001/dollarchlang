@@ -9,8 +9,11 @@
 ; To detect the keyboard layout, this script uses code from
 ; http://www.autohotkey.com/board/topic/43043-get-current-keyboard-layout/ 
 
-; Keyboard layouts. Change these to suit your needs.
-NON_ROMAN_KEYBOARD = 0x4290429
+; Keyboard layouts - defaults are Persian (Standard) and British English.
+; Change these to suit your needs. Some useful keyboard codes:
+; Persian (`Persian'): 0x4290429
+; American English:    0x4090409
+NON_ROMAN_KEYBOARD = 0xF03A0429
 ROMAN_KEYBOARD = 0x8090809
 
 ; Active for QWidget windows, which is what TeXstudio is identified as.
