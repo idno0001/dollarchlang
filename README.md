@@ -44,6 +44,7 @@ Known issues and drawbacks
 * This script is _just_ a script. It is not smart enough to detect whether you are in math mode (when writing something in (La)TeX) or not. If one wishes to write something entirely in English, French or any other language that works well in math mode, simply disable the script by exiting or pausing it.
 * It currently only supports two keyboard layouts. If you have more than two keyboard layouts, the script will not work properly. (This is an easy fix and will be fixed shortly.)
 * Using double dollars (`$$`) for math environments will not work. Having said that, one should _not_ use `$$ ... $$` anyway; use `\[ ... \]` instead. See [this question] [2] on TeX.sx.
+* `\[ ... \]` is not supported, nor are the other math environments. User feedback might be needed to determine whether this is necessary.
 * Windows-only for now :(
 
 [1]: http://autohotkey.com   "AutoHotKey"
