@@ -46,5 +46,5 @@ Known issues and drawbacks
 * Using double dollars (`$$`) for math environments will not work. Having said that, one should _not_ use `$$ ... $$` anyway; use \[ ... \] instead. See [this question] [2] on TeX.sx.
 * Windows-only for now :(
 
-[1] http://autohotkey.com   "AutoHotKey"
-[2] http://tex.stackexchange.com/questions/503/   "TeX.sx"
+[1]: http://autohotkey.com   "AutoHotKey"
+[2]: http://tex.stackexchange.com/questions/503/   "TeX.sx"
