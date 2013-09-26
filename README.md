@@ -6,7 +6,7 @@ Simple AutoHotKey script to switch keyboard layout when the $ key is pressed. Th
 Usage
 -----
 1.  Install [AutoHotKey] [1].
-2.  Run this the dollarchlang.ahk script.
+2.  Run the dollarchlang.ahk script.
 3.  Modify as necessary (see below).
 
 Adding support for other programs
