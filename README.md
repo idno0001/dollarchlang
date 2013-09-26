@@ -6,7 +6,7 @@ Simple AutoHotKey script to switch keyboard layout when the $ key is pressed. Th
 Usage
 -----
 1.  Install [AutoHotKey] [1].
-2.  Run the dollarchlang.ahk script.
+2.  Run the `dollarchlang.ahk` script.
 3.  Modify as necessary (see below).
 
 Adding support for other programs
@@ -41,9 +41,9 @@ _Note:_ `0x4090409` is the keyboard layout for US English.
 
 Known issues and drawbacks
 --------------------------
-* This script is _just_ a script. It is not smart enough to detect whether one is in math mode (when writing something in (La)TeX) or not. If one wishes to write something entirely in English, French or any other language that works well in math mode, simply disable the script by exiting or pausing it.
-* It currently only supports two keyboard layouts. If one has more than two keyboard layouts, the script will not work properly. (This is an easy fix and will be fixed shortly.)
-* Using double dollars (`$$`) for math environments will not work. Having said that, one should _not_ use `$$ ... $$` anyway; use \[ ... \] instead. See [this question] [2] on TeX.sx.
+* This script is _just_ a script. It is not smart enough to detect whether you are in math mode (when writing something in (La)TeX) or not. If one wishes to write something entirely in English, French or any other language that works well in math mode, simply disable the script by exiting or pausing it.
+* It currently only supports two keyboard layouts. If you have more than two keyboard layouts, the script will not work properly. (This is an easy fix and will be fixed shortly.)
+* Using double dollars (`$$`) for math environments will not work. Having said that, one should _not_ use `$$ ... $$` anyway; use `\[ ... \]` instead. See [this question] [2] on TeX.sx.
 * Windows-only for now :(
 
 [1]: http://autohotkey.com   "AutoHotKey"
