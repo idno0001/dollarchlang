@@ -16,11 +16,12 @@
 NON_ROMAN_KEYBOARD = 0xF03A0429
 ROMAN_KEYBOARD = 0x8090809
 
-; Active for QWidget windows, which is what TeXstudio is identified as.
-; To add support for other programs, use Window Spy that comes with
-; AutoHotKey to identify the ahk_class, and change the next line to
-; #If WinActive("ahk_class QWidget") || WinActive("ahk_class <new_ahk_class>")
-#If WinActive("ahk_class QWidget")
+; Active for QWidget or Qy5QWindowIcon windows, which is what TeXstudio is
+; identified (old or new). To add support for other programs, use Window Spy
+; that comes with AutoHotKey to identify the ahk_class, and add
+; || WinActive("ahk_class <new_ahk_class>")
+; to the following #If statement.
+#If WinActive("ahk_class QWidget") || WinActive("ahk_class Qt5QWindowIcon")
 $$::
 {
   ; Get current keyboard layout ID.
