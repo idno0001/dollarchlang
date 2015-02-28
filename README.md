@@ -9,6 +9,7 @@ Simple AutoHotKey script to switch keyboard layout when the `$` key is pressed. 
 
 ## Modifying the script
 Unless you are using British English and Persian keyboard layouts with TeXstudio only, you will need to make changes to the script:
+
 1. Open `dollarchlang.ahk` in a text editor.<sup>1</sup>
 2. Make your changes (see below).
 3. Reload the script: find the AutoHotKey icon in the system tray, right-click and choose `Reload This Script`.
@@ -43,6 +44,7 @@ By default, these are the codes for Persian and British English, respectively. S
 
 #### Finding your keyboard layout codes
 To find your own keyboard layout codes:
+
 1. Change the line that says `DEBUG_MODE := false` to `DEBUG_MODE := true`. This turns on `DEBUG_MODE`.
 2. Reload the script.
 3. In TeXstudio (or any program you added in the above section), type a `$`. This will print a number, e.g. `0409`. This is the keyboard code for your _current_ keyboard layout, so change the relevant variable as appropriate.
