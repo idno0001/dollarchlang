@@ -9,12 +9,21 @@
 ; To detect the keyboard layout, this script uses code from
 ; http://www.autohotkey.com/board/topic/43043-get-current-keyboard-layout/ 
 
-; Keyboard layouts - defaults are Persian (Standard) and British English.
-; Change these to suit your needs. Some useful keyboard codes:
-; Persian (`Persian'): 0x4290429
-; American English:    0x4090409
-NON_ROMAN_KEYBOARD = 0xF03A0429
-ROMAN_KEYBOARD = 0x8090809
+; Only the last 4 digits of your keyboard layout code are required. For
+; example, some Persian keyboard layouts are:
+; Persian (`Persian'):                  0x4290429
+; Persian (`Standard'):                 0xF03A0429
+; Persian (`Iranian Standard Persian'): 0xF0C10429
+; where the respective keyboard codes begin with 0x. We only need the 0429
+; part of the keyboard code.  
+; 
+; The  default layouts are Persian and British English. Change these to suit your
+; needs. Some useful keyboard codes:
+; Persian:          0429
+; American English: 0409
+; British English:  0809
+NON_ROMAN_KEYBOARD = 0429
+ROMAN_KEYBOARD = 0809
 
 ; Active for QWidget or Qy5QWindowIcon windows, which is what TeXstudio is
 ; identified (old or new). To add support for other programs, use Window Spy
@@ -29,10 +38,14 @@ $$::
   WinGet, WinID,, A
   ThreadID:=DllCall("GetWindowThreadProcessId", "UInt", WinID, "UInt", 0)
   InputLocaleID:=DllCall("GetKeyboardLayout", "UInt", ThreadID, "UInt")
+  StringRight, InputLocaleID, InputLocaleID, 4
   
   ; Currently in Persian - change keyboard layout and print a dollar.
   if InputLocaleID = %NON_ROMAN_KEYBOARD%
-    Send {Alt Down}{Shift Down}{Shift Up}{Alt Up}$
+  {
+    Send {Alt Down}{Shift Down}{Shift Up}{Alt Up}
+    Send {$}
+  }
   ; Currently in British English - insert a dollar and change keyboard layout.
   else if InputLocaleID = %ROMAN_KEYBOARD%
     Send ${Alt Down}{Shift Down}{Shift Up}{Alt Up}
